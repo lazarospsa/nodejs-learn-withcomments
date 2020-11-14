@@ -12,7 +12,14 @@ const port = process.env.port || 3000
 
 
 //middleware - trexei se ka9e request prwtou ektelestei to response
-app.use(logger)
+// app.use(logger)
+//^^^^ ean apenergopoih9ei auto to module kerdizw shmantiko pleonektima sto posa requests sukwnei h efarmogh
+//363 req/s me ton logger
+//805 req/s xwris ton logger
+//to test egine me autocannon
+//npm i -g autocannon
+//autocannon -c 100 -d 1 -p 10 http://localhost:3000/api/students/1
+
 //routes for web
 app.use('/',require('./routes/web'))
 //routes for api
