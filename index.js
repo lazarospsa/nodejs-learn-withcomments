@@ -1,5 +1,6 @@
 //kanw eisagwgh ta paketa pou 9elw na xrhsimopoihsw
 const express = require('express')
+const bodyParser = require('body-parser');
 const path = require('path')
 //eisagagw to diko mou module
 const logger = require('./middleware/logger')
@@ -10,9 +11,12 @@ const app = express()
 app.use(express.static(path.join(__dirname, 'public')))
 const port = process.env.port || 3000
 
+//eisagw auta ta duo middlewares gia na mporw na pairnw post requests
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 //middleware - trexei se ka9e request prwtou ektelestei to response
-// app.use(logger)
+app.use(logger)
 //^^^^ ean apenergopoih9ei auto to module kerdizw shmantiko pleonektima sto posa requests sukwnei h efarmogh
 //363 req/s me ton logger
 //805 req/s xwris ton logger
