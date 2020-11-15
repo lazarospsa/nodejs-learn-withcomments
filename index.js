@@ -31,6 +31,7 @@ app.use(logger)
 //npm i -g autocannon
 //autocannon -c 100 -d 1 -p 10 http://localhost:3000/api/students/1
 
+//post a new row to mongo db
 app.post('/trymongo', (req, res) => {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
@@ -50,6 +51,7 @@ app.post('/trymongo', (req, res) => {
     });
 });
 
+//gets all mongo db results that have name (like parametres)
 app.get('/trymongo/name/:name', (req, res) => {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
@@ -70,6 +72,7 @@ app.get('/trymongo/name/:name', (req, res) => {
     });
 });
 
+//gets all mongo db results that have that age (from params)
 app.get('/trymongo/:age', (req, res) => {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
@@ -88,6 +91,7 @@ app.get('/trymongo/:age', (req, res) => {
     });
 });
 
+//gets all mongo db results
 app.get('/trymongo', (req, res) => {
     // mongoose.connect(mongoConnectionString, {useNewUrlParser: true, useUnifiedTopology: true});
     MongoClient.connect(url, function(err, db) {
