@@ -19,12 +19,12 @@ const url = process.env.db_host;
 
 
 //eisagw auta ta duo middlewares gia na mporw na pairnw post requests
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //middleware - trexei se ka9e request prwtou ektelestei to response
 app.use(logger)
-//^^^^ ean apenergopoih9ei auto to module kerdizw shmantiko pleonektima sto posa requests sukwnei h efarmogh
+//^^^^ ean apenergopoih9ei auto to module kerdizw shmantiko pleonektima sto posa requests shkwnei h efarmogh
 //363 req/s me ton logger
 //805 req/s xwris ton logger
 //to test egine me autocannon
@@ -94,7 +94,7 @@ app.get('/trymongo/:age', (req, res) => {
 //gets all mongo db results
 app.get('/trymongo', (req, res) => {
     // mongoose.connect(mongoConnectionString, {useNewUrlParser: true, useUnifiedTopology: true});
-    MongoClient.connect(url, function(err, db) {
+    MongoClient.connect(url, async function(err, db) {
     if (err) throw err;
     useNewUrlParser: true
     useUnifiedTopology: true

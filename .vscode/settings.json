@@ -1,0 +1,7 @@
+{
+    "javascript.format.semicolons": "insert",
+    "typescript.format.semicolons": "insert",
+    "files.autoSave": "onFocusChange",
+    "prettier.semi": true,
+    "autoimport.useSemiColon": true
+}
