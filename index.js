@@ -41,14 +41,18 @@ app.listen(port, () => console.log(`Server running on port: ${port}`))
 //$ sudo brew services restart mongod
 
 
-//post request -> http://localhost:3000/trymongo
-//{
-// "name":"Xristina",
-// "age":"25"
-// }
+//-----------URLS-----------
+// get /
+// get /about
+// get /html
 
-//get request -> http://localhost:3000/trymongo/
-//returns all data
+// get /api/students
+// get /api/students/{id}
+// post /api/students
+// put /api/students/{id}
+// delete /api/students/{id}
 
-//get request -> http://localhost:3000/trymongo/Lazaros
-//return only the row that name is Lazaros
+// get /mongo
+// get /mongo/name/{name}
+// post /mongo
+// get /mongo/{age}

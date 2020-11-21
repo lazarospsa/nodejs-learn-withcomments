@@ -1,4 +1,3 @@
-//kanw eisagwgh kai edw to express k to student dioti to xrhsimopoioun ta routes
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongo = express.Router()
@@ -8,7 +7,6 @@ let MongoClient = require('mongodb').MongoClient;
 const url = process.env.db_host;
 //---------------insert mongoose to project--------------
 
-//eisagw auta ta duo middlewares gia na mporw na pairnw post requests
 mongo.use(bodyParser.json());
 mongo.use(bodyParser.urlencoded({ extended: true }));
 
