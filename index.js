@@ -34,12 +34,6 @@ app.use('/mongo/',require('./routes/api/mongo'))
 //start server
 app.listen(port, () => console.log(`Server running on port: ${port}`))
 
-//start db -> cd db && mongod --dbpath=. ----- OXI AUTO
-//brew services start mongodb-community ---- <<<< ME AUTO
-//ean vgazei 9ema trexw
-//$ sudo rm -rf /tmp/mongodb-27017.sock
-//$ sudo brew services restart mongod
-
 
 //-----------URLS-----------
 // get /

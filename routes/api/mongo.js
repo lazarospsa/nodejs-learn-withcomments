@@ -1,5 +1,4 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const mongo = express.Router()
 require('dotenv').config()
 //---------------insert mongoose to project--------------
@@ -7,8 +6,6 @@ let MongoClient = require('mongodb').MongoClient;
 const url = process.env.db_host;
 //---------------insert mongoose to project--------------
 
-mongo.use(bodyParser.json());
-mongo.use(bodyParser.urlencoded({ extended: true }));
 
 //post a new row to mongo db
 mongo.post('/', (req, res) => {
