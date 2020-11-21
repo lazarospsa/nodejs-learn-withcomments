@@ -71,4 +71,10 @@ router.delete('/:id', (req, res) => {
     }
     if (!student) res.json({ 'status': 'Den vre9hke o student autos' })
 })
+
+
+  
+  
+
+
 module.exports = router
